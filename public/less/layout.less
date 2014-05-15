@@ -1,3 +1,12 @@
+@menuLinkColor: #444444;
+@specialMenuLinkColor: #6A8E56;
+
+@import: "mixins.less";
+
+body {
+	background: #F3F3F3;
+}
+
 .logo-wrapper {
 	padding: 40px 0px 50px;
 	margin: 0px auto 0px;
@@ -5,9 +14,33 @@
 }
 
 ul.menu {
+	margin-left: 0px;
+	padding-left: 0px;
+	
 	li {
+		float: left;
+		list-style-type: none;
+		text-indent: 0px;
+		margin-right: 20px;
+		
 		a {
 			text-transform: uppercase;
+			color: @menuLinkColor;
+			font-weight: 600;
+			font-size: 18px;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		
+		&.special-item {
+			float: right;
+			margin-right: 0px;
+			a {
+				color: @specialMenuLinkColor;
+				font-size: 16px;
+			}
 		}
 	
 	}
