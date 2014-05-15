@@ -1,0 +1,21 @@
+{
+  "name": "orangedigital",
+  "version": "0.0.0",
+  "homepage": "https://github.com/aleksUIX/orangedigital",
+  "authors": [
+    "aleksUIX <aleksander@uixlimited.com>"
+  ],
+  "main": "bower.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "less": "~1.7.0"
+  }
+}
