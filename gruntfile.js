@@ -5,16 +5,22 @@ module.exports = function(grunt) {
         options: {
           compress: true,
           yuicompress: true,
-          optimization: 2
+          optimization: 2,
+		  paths: ["public/css"]
         },
         files: {
           "public/css/main.css": "public/less/layout.less"
         }
       }
+    },
+    watch: {
+		files: ['public/less/*.less'],
+		tasks: ['less']
     }
   });
  
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
  
   grunt.registerTask('default', ['less']);
 };

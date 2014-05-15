@@ -5,5 +5,5 @@ test("calculator", function() {
 	equal(calculator(2,5,"mul"), 10, "multiplication");
 	
 	equal(calculator("1","3","sum"), 4, "string arguments addition");
-	equal(calculator("1",1,"asd"), "Error", "bad operand");
+	equal(calculator("1",1,"asd"), "Error", "bad operator");
 });
