@@ -1,10 +1,10 @@
+
 @menuLinkColor: #444444;
 @specialMenuLinkColor: #6A8E56;
 
-@import: "mixins.less";
 
 body {
-	background: #F3F3F3;
+	background: #F3F3F6;
 }
 
 .logo-wrapper {
@@ -43,6 +43,8 @@ ul.menu {
 			color: @menuLinkColor;
 			font-weight: 600;
 			font-size: 18px;
+			padding: 0px;
+			margin: 0px;
 			
 			&:hover {
 				text-decoration: none;
@@ -59,6 +61,26 @@ ul.menu {
 			}
 		}
 	
+	}
+}
+
+.navbar {
+	background: none;
+	border: 0px;
+	margin: 0px 0px 0px -20px;
+	padding: 0px;
+	min-height: 0px;
+	
+	#navbarCollapse {
+		margin: 0px;
+	}
+	
+	.navbar-nav.navbar-right:last-child {
+		margin-right: 0px;
+	}
+	
+	.navbar-brand {
+		padding: 0px;
 	}
 }
 
@@ -79,14 +101,14 @@ ul.menu {
 			
 		input {
 			border: 0px;
-			width:	138px;
+			width:	100%;
 			height: 97px;
 			margin: 1px auto 1px;
 			font-size: 26px;
 			float: none;
 			display: inline-block;
 			text-align: center;
-			background: #FFFFFF  !important;
+			background: none  !important;
 		}
 		
 		.dropdown-toggle {
@@ -135,5 +157,108 @@ ul.menu {
 		margin-top: -60px;
 		position: relative;
 		margin-bottom: 20px;
+	}
+}
+
+.showMobile {
+	display: none;
+}
+
+/* responsive */
+
+@media (min-width: 768px) and (max-width: 992px){
+	.calc-wrapper {
+		.col-md-2 {
+			width: 16.66666667%;
+			float: left;
+				
+			.calc-input {
+				width:	100%;
+				height: 100px;
+			}
+		}
+		.col-md-1 {
+			width: 8.33333333%;
+			float: left;
+		}
+	}
+}
+@media (min-width: 1200px){
+	.navbar {
+		height: 30px;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 768px){
+
+	.logo-wrapper {
+		display: none;
+	}
+	
+	.calc-wrapper {
+		.calc-input {
+			width:	100%;
+			height: 50px;
+			
+			input {
+				height: 50px;
+			}
+			
+			.dropdown-menu {
+				width: 90%;
+			}
+		}
+		
+		.calc-typo {
+			height: 30px;
+			line-height: 40px;
+		}
+		
+		.col-md-1 {
+			min-height: 30px;
+		}
+	}
+	
+	.navbar {
+		padding: 10px 0px;
+		
+		.navbar-header {
+			text-align: center;
+			padding-left: 10px;
+	
+			.navbar-brand {
+				float: none;
+				display: inline-block;
+				padding: 5px 31px 0px 0px;
+			}
+		}
+		
+		.menu {
+			margin-bottom: 0px;
+		
+			li {
+				clear: both;
+				height: 30px;
+				text-align: center;
+				width: 100%;
+				
+				a {
+					display: inline-block;
+					float: none;
+				}
+			}
+		}
+	}
+	
+	.navbar-toggle {
+		float: left;
+	}
+	
+	.hideMobile {
+		display: none;
+	}
+	.showMobile {
+		display: block;
 	}
 }
