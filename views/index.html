@@ -34,40 +34,40 @@
 				</div>
 			</div>
 			<div class="separator col-md-10 col-md-offset-1 clearfix"></div>
-			<div class="row-fluid calc-wrapper clearfix">
-				<div class="col-md-10 col-md-offset-1">
+			<div class="row-fluid calc-wrapper clearfix" ng-app>
+				<div class="col-md-10 col-md-offset-1" ng-controller="CalculatorController">
 					<div class="row-fluid">
 						<div class="col-md-2">
-							<div class="calc-input">
-								<input type="text" />
+							<div class="calc-input {{inputValidationClass}}">
+								<input type="text" ng-model="arg1"/>
 							</div>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-2">
 							<div class="calc-input">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-								+ <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">+</a></li>
-								<li><a href="#">-</a></li>
-								<li><a href="#">/</a></li>
-								<li><a href="#">%</a></li>
-							</ul>
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									{{operator.symbol}} <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#" ng-click="operatorClick('sum', '+')">+</a></li>
+									<li><a href="#" ng-click="operatorClick('sub', '-')">-</a></li>
+									<li><a href="#" ng-click="operatorClick('div', '/')">/</a></li>
+									<li><a href="#" ng-click="operatorClick('mul', '*')">*</a></li>
+								</ul>
 							</div>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-2">
-							<div class="calc-input">
-								<input type="text" />
+							<div class="calc-input {{inputValidationClass}}">
+								<input type="text" ng-model="arg2" />
 							</div>
 						</div>
 						<div class="col-md-1">
 							<span class="calc-typo">=</span>
 						</div>
 						<div class="col-md-2">
-							<div class="calc-input">
-								<input type="text" />
+							<div class="calc-input {{inputValidationClass}}">
+								<input type="text" value="{{result}}" disabled />
 							</div>
 						</div>
 					</div>
