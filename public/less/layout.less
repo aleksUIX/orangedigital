@@ -116,6 +116,7 @@ ul.menu {
 			height: 100%;
 			border: 0px;
 			font-size: 30px;
+			line-height: 90px;
 			
 			.caret {
 				float: right;
@@ -126,6 +127,15 @@ ul.menu {
 		.dropdown-menu {
 			min-width: 140px;
 			margin-left: 16px;
+		}
+		
+		.caret-alt {
+			height: 98px;
+			background: #979797 url(../img/dropdown-arrow.png) no-repeat;
+			width: 44px;
+			float: right;
+			margin-right: -12px;
+			margin-top: -6px;
 		}
 	}
 		
@@ -166,6 +176,19 @@ ul.menu {
 
 /* responsive */
 
+@media (min-width: 1200px){
+	.navbar {
+		height: 30px;
+		overflow: hidden;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+	.calc-typo {
+		margin-left: 20px;
+	}
+}
+
 @media (min-width: 768px) and (max-width: 992px){
 	.calc-wrapper {
 		.col-md-2 {
@@ -181,12 +204,6 @@ ul.menu {
 			width: 8.33333333%;
 			float: left;
 		}
-	}
-}
-@media (min-width: 1200px){
-	.navbar {
-		height: 30px;
-		overflow: hidden;
 	}
 }
 
@@ -207,6 +224,10 @@ ul.menu {
 			
 			.dropdown-menu {
 				width: 90%;
+			}
+			
+			.caret-alt {
+				margin-top: -28px;
 			}
 		}
 		
